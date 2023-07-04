@@ -84,7 +84,7 @@
                     <ul class="post-info">
                       <li><a href="{% url 'view_user_information' blog.user.username %}">{{blog.user.username}}</a></li>
                       <li><a href="javascript:void(0);">{{blog.created_date}}</a></li>
-                      <li><a href="javascript:void(0);">{{blog.blog_comments.all.count}} Comments</a></li>
+                      <li><a href="javascript:void(0);">{{blog.blog_comments.all.count}} Bình luận</a></li>
                     </ul>
                     <p>{{blog.description|safe}}</p>
                     <div class="post-options">
@@ -138,7 +138,7 @@
               <div class="col-lg-12">
                 <div class="sidebar-item comments">
                   <div class="sidebar-heading">
-                    <h2>{{blog.blog_comments.count}} Comments</h2>
+                    <h2>{{blog.blog_comments.count}} Bình luận</h2>
                   </div>
                   <div class="content">
                     <ul class="d-flex flex-column">
@@ -161,9 +161,9 @@
                               <div class="col-lg-12">
                                 <fieldset>
                                   {% if request.user.is_authenticated %}
-                                  <button type="submit" id="form-submit" class="main-button reply-button">Reply</button>
+                                  <button type="submit" id="form-submit" class="main-button reply-button">Trả lời</button>
                                   {% else %}
-                                  <a href="{% url 'login' %}" id="form-submit" class="main-button reply-button">Login to reply</a>
+                                  <a href="{% url 'login' %}" id="form-submit" class="main-button reply-button">Đăng nhập để trả lời</a>
                                   {% endif %}
                                 </fieldset>
                               </div>
@@ -192,7 +192,7 @@
               <div class="col-lg-12">
                 <div class="sidebar-item submit-comment">
                   <div class="sidebar-heading">
-                    <h2>Your comment</h2>
+                    <h2>Bình luận của bạn</h2>
                   </div>
                   <div class="content">
                     <form id="comment" action="{% url 'blog_details' blog.slug %}" method="POST">
@@ -200,15 +200,15 @@
                       <div class="row">
                         <div class="col-lg-12">
                           <fieldset>
-                            <textarea name="text" rows="6" id="message" placeholder="Type your comment" required=""></textarea>
+                            <textarea name="text" rows="6" id="message" placeholder="Nhập bình luận của bạn" required=""></textarea>
                           </fieldset>
                         </div>
                         <div class="col-lg-12">
                           <fieldset>
                             {% if request.user.is_authenticated %}
-                            <button type="submit" id="form-submit" class="main-button">Submit</button>
+                            <button type="submit" id="form-submit" class="main-button">Gửi</button>
                             {% else %}
-                            <a href="{% url 'login' %}" id="form-submit" class="main-button">Login to comment</a>
+                            <a href="{% url 'login' %}" id="form-submit" class="main-button">Đăng nhập để bình luận</a>
                             {% endif %}
                           </fieldset>
                         </div>

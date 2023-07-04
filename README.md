@@ -1,81 +1,58 @@
 # Django Blog Website
-
-***This project is part of a series on YouTube that teaches how to build a blog  website with Django.***
-
-[Watch on Youtube](https://www.youtube.com/watch?v=WpyXXBTcERc&list=PLoomN1iY7V9neojqrkqPVvE0GdmfOTcht)
-
-Project Summary and Features
+Website Tùng Blog
 ================
 
-  + Crud operation on blogs
-  + Custom user model
-  + Registration
-  + Authentication through username plus email
-  + Personal profile management
-  + Filter blogs by different criteria (title, category, tags)
-  + Search blogs by different criteria
-  + Like blogs
-  + Comment and replies on blogs
-  + Follow unfollow other users
-  + Implementing generic relations
-  + Notification system
-  + Mute unmute notifications
-  + Deployment on pythonanywhere
+*** Các chức năng chính của blog
+   + CRUD blog
+   + Custom user
+   + Đăng ký
+   + Xác thực thông qua tên người dùng cộng với email
+   + Quản lý hồ sơ cá nhân
+   + Lọc blog theo các tiêu chí khác nhau (tiêu đề, danh mục, thẻ)
+   + Tìm kiếm blog theo các tiêu chí khác nhau
+   + Thích blog
+   + Bình luận và trả lời trên blog
+   + Theo dõi hủy theo dõi người dùng khác
+   + Hệ thống thông báo
 
-Usage
+Cách sử dụng
 =================
 
-First clone this repo and go to the project root.
-
-    $ git clone https://github.com/MoinulHossainNabil/YT_Blog.git
-    $ cd YT_Blog
-
-I would recommend to work on a virtual environment. I have used ***virtualenv*** package to create a virtual environment you may wanna use other package. So install this as well if you already haven't.
+- Đầu tiên tải và cài đặt python
+- Sau đó cài đặt môi trường ảo để sử dụng
 
     $ pip install virtualenv
     
-Now create you own virtual environment here and install the project required packages written in requirements.txt file by running the following commands.
+- Bây giờ tạo môi trường ảo của riêng mình để chạy.
 
-    $ virtualenv venv_name
+     $ virtualenv venv_name
 
-Activate the virtual environment by the following command:
-
-
-***On Linux***
-
-    $ source venv_name/bin/activate
+- Sau khi tạo, truy cập vào trong venv_name/Scripts để chạy lệnh activate
     
-***On Windows***
-
-If you are using git bash
-
-    $ source venv_name/Scripts/activate
-    
-If you are using CMD
 
     $ cd venv_name/Scripts
     $ activate
     $ cd ../../
     
     
-Now install the package requirements by:
+- Bây giờ qua trở lại thư mục gốc và cài đặt các gói packages đã khai báo sắn trong file requirement.txt 
 
     $ pip install -r requirements.txt
     
 Well your environment is ready now.
 
-Finally, you have to make migrations to get the app started and create a new superuser to interact with the admin dashboard.
-So run the following commands as follows:
+- Sau đó khởi tạo db và user đầu tiên cho việc truy cập
 
     $ python manage.py migrate
     $ python manage.py createsuperuser
 
-So after successful completion of these you are ready to run the application by the following command:
+- Sau khi đã hoàn thành các công đoạn cài đặt, ta chạy sự án
 
     $ python manage.py runserver
     
-Now open the browser go to ***localhost/8000/*** and you will see the home page of the application.
-But you will find no content. Now login to the the admin dashboard using the username and password you created as a super user.
-So login to the admin panel using ***localhost:8000/admin/*** and you will find all of the models. Create some categories first that is needed to create blogs.
-Now you are ready to go to use the app.
+- Bây giờ mở website trên địa chỉ locahost::8000 để truy cập blog.
+
+
+
+______________________________THANK_________________________________
 
